@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+'use client';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Banner></Banner>
+      <Exhibit headingText="Deployments">
+        <ul>
+        <li>Dep 1</li>
+        <li>Dep 2</li>
+        <li>Dep 3</li>
+        </ul>
+      </Exhibit>
+      
     </div>
   );
+}
+
+function Exhibit({ headingText, children }) {
+  return (<div className='Exhibit'>
+    <strong className="ex-heading">{headingText}</strong>
+    <div>
+      {children}
+    </div>
+  </div>);
+}
+
+function Banner() {
+  return <div className="Banner">
+    <span>Sextant</span>
+  </div>
 }
 
 export default App;
