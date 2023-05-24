@@ -1,0 +1,10 @@
+.Banner {
+    text-align: center;
+    background-color: #260F03;
+    color: rgba(255, 255, 255, 0.97);
+    top: 0px;
+    height: 64px;
+    line-height: 64px;
+    font-size: 32px;
+    vertical-align: middle;
+  }

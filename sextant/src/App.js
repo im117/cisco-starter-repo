@@ -1,36 +1,24 @@
 'use client';
 
 import './App.css';
+import { Exhibit } from './Exhibit.js';
+import { Banner } from './Banner'
+import { IP } from './UserIP.js';
 
 function App() {
   return (
     <div className="App">
       <Banner></Banner>
-      <Exhibit headingText="Deployments">
+      <Exhibit headingText="IP Address">
         <ul>
-        <li>Dep 1</li>
-        <li>Dep 2</li>
-        <li>Dep 3</li>
+          <li>Public IPv4: <IP ipv6={false} /></li>
+          <li>Public IPv6: <IP ipv6={true} /></li>
         </ul>
       </Exhibit>
-      
+
     </div>
   );
 }
 
-function Exhibit({ headingText, children }) {
-  return (<div className='Exhibit'>
-    <strong className="ex-heading">{headingText}</strong>
-    <div>
-      {children}
-    </div>
-  </div>);
-}
-
-function Banner() {
-  return <div className="Banner">
-    <span>Sextant</span>
-  </div>
-}
 
 export default App;
